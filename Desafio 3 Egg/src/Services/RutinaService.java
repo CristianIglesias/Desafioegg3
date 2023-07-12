@@ -14,11 +14,11 @@ import java.util.Scanner;
  * @author Cris
  */
 public class RutinaService {
-    
+
     private Rutina ruti = new Rutina();
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    
-        public Rutina CrearRutina() {
+
+    public Rutina CrearRutina() {
         Rutina rutiAux = new Rutina();
         System.out.println("Ingrese el Nombre de la Rutina.");
         rutiAux.setNombre(leer.nextLine());
@@ -28,16 +28,15 @@ public class RutinaService {
         rutiAux.setDificultad(leer.nextInt());
         //Para que no nos coma una linea de mas.
         leer.nextLine();
-        
+
         System.out.println("Ingrese una breve descripcion de la Rutina.");
         rutiAux.setDescripcion(leer.nextLine());
-        
-       
+
         leer.nextLine();
         return rutiAux;
     }
 
-    public void ListarRutinas(ArrayList <Rutina> rutinas) {
+    public void ListarRutinas(ArrayList<Rutina> rutinas) {
         for (int i = 0; i < rutinas.size(); i++) {
             System.out.println(rutinas.get(i).toString());
         }
