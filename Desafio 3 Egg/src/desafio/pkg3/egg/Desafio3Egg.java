@@ -7,7 +7,10 @@ package desafio.pkg3.egg;
 
 import Entities.Cliente;
 import Entities.Rutina;
+import Services.ClienteService;
+import Services.RutinaService;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -27,9 +30,25 @@ public class Desafio3Egg {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        int opcion = -1;
+        Scanner leer = new Scanner(System.in);
+        ClienteService clienteServ = new ClienteService();
+        RutinaService rutinaServ = new RutinaService();
+        
         
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
