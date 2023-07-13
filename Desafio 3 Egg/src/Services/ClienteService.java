@@ -5,7 +5,7 @@
  */
 package Services;
 
-import Entities.Cliente;
+import Entities.cliente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,12 +15,12 @@ import java.util.Scanner;
  */
 public class ClienteService {
 
-    private Cliente cli = new Cliente();
+    private cliente cli = new cliente();
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
 
-    public ArrayList<Cliente> CrearCliente(ArrayList<Cliente> clientes) {
+    public ArrayList<cliente> CrearCliente(ArrayList<cliente> clientes) {
        
-        Cliente cliAux = new Cliente();
+        cliente cliAux = new cliente();
         
         cliAux.setId(clientes.size()+1);
         
@@ -48,19 +48,19 @@ public class ClienteService {
         return clientes;
     }
 
-    public void ListarClientes(ArrayList<Cliente> clientes) {
+    public void ListarClientes(ArrayList<cliente> clientes) {
         for (int i = 0; i < clientes.size(); i++) {
             System.out.println(clientes.get(i).toString());
         }
     }
     
-    public ArrayList<Cliente> ModificarCliente(ArrayList<Cliente> clientes){
+    public ArrayList<cliente> ModificarCliente(ArrayList<cliente> clientes){
     
         int id; 
         boolean bandera = false;
         Scanner leer = new Scanner(System.in);
         this.ListarClientes(clientes);
-        Cliente cliAux = new Cliente();
+        cliente cliAux = new cliente();
        
         while(!bandera){
         System.out.println("ingrese el ID del cliente a modificar");
@@ -107,13 +107,13 @@ public class ClienteService {
 
 
 
-    public ArrayList<Cliente> EliminarCliente(ArrayList<Cliente> clientes){
+    public ArrayList<cliente> EliminarCliente(ArrayList<cliente> clientes){
     
      int id; 
         boolean bandera = false;
         Scanner leer = new Scanner(System.in);
         this.ListarClientes(clientes);
-        Cliente cliAux = new Cliente();
+        cliente cliAux = new cliente();
        
         while(!bandera){
         System.out.println("ingrese el ID del cliente a modificar");

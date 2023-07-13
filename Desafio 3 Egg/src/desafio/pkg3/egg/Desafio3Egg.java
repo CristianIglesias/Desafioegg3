@@ -5,7 +5,7 @@
  */
 package desafio.pkg3.egg;
 
-import Entities.Cliente;
+import Entities.cliente;
 import Entities.Rutina;
 import Services.ClienteService;
 import Services.MenuServicio;
@@ -22,7 +22,7 @@ public class Desafio3Egg {
     /**
      * @param args the command line arguments
      */
-    static ArrayList<Cliente> listaCliente = new ArrayList<>();
+    static ArrayList<cliente> listaCliente = new ArrayList<>();
     static ArrayList<Rutina> listaRutina = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -73,23 +73,26 @@ public class Desafio3Egg {
                     
                     int opcionRut = -1;
                     while (opcionRut != 0) {
-                        menuServ.MostrarMenuClientes();
+                        menuServ.MostrarMenuRutinas();
                         opcionRut = leer.nextInt();
                         leer.nextLine();
                         
                         switch (opcionRut) {
                             case 1:
+                                listaRutina = rutinaServ.CrearRutina(listaRutina);
                                 break;
                             case 2:
+                                rutinaServ.ListarRutinas(listaRutina);
                                 break;
                             case 3:
+                                listaRutina = rutinaServ.ModificarRutinas(listaRutina);
                                 break;
                             case 4:
+                                listaRutina = rutinaServ.EliminarRutina(listaRutina);
                                 break;
                         }
-                        break;
-
                     }
+
 
                 case 0:
                     return;

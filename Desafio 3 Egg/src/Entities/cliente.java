@@ -9,7 +9,7 @@ package Entities;
  *
  * @author Cris
  */
-public class Cliente {
+public class cliente {
     
      private int id;
      private String nombre;
@@ -18,10 +18,10 @@ public class Cliente {
      private Double peso;
      private String objetivo;
 
-    public Cliente() {
+    public cliente() {
     }
 
-    public Cliente(int id, String nombre, int edad, Double altura, Double peso, String objetivo) {
+    public cliente(int id, String nombre, int edad, Double altura, Double peso, String objetivo) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
