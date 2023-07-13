@@ -67,7 +67,7 @@ public class ClienteService {
         
         
         id = leer.nextInt();
-        
+        leer.nextLine();
         for (int i = 0; i < clientes.size(); i++)
         {
             if (clientes.get(i).getId() == id){
@@ -100,14 +100,39 @@ public class ClienteService {
 
         leer.nextLine();
         
-        clientes.add((cliAux.getId()-1), cliAux);
+        
+        clientes.set((cliAux.getId()-1), cliAux);
         return clientes;
    }
 
 
 
-
+    public ArrayList<Cliente> EliminarCliente(ArrayList<Cliente> clientes){
     
+     int id; 
+        boolean bandera = false;
+        Scanner leer = new Scanner(System.in);
+        this.ListarClientes(clientes);
+        Cliente cliAux = new Cliente();
+       
+        while(!bandera){
+        System.out.println("ingrese el ID del cliente a modificar");
+        
+        
+        id = leer.nextInt();
+        
+        for (int i = 0; i < clientes.size(); i++)
+        {
+            if (clientes.get(i).getId() == id){
+                bandera = true;
+                cliAux = clientes.get(i);
+                clientes.remove(cliAux);
+                break;
+            }
+        }
+        }
+    return clientes;
+    }  
     
     
     

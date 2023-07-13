@@ -45,6 +45,7 @@ public class Desafio3Egg {
                 case 1:
 
                     int opcionCli = -1;
+                    
                     while (opcionCli != 0) {
                         menuServ.MostrarMenuClientes();
                         opcionCli = leer.nextInt();
@@ -61,9 +62,10 @@ public class Desafio3Egg {
                                 listaCliente = clienteServ.ModificarCliente(listaCliente);
                                 break;
                             case 4:
+                                listaCliente = clienteServ.EliminarCliente(listaCliente);
                                 break;
                         }
-                        break;
+                     
 
                     }
 
@@ -96,10 +98,10 @@ public class Desafio3Egg {
                     System.out.println("una opcion valida cammpeon");
                     break;
 
-            }
+            }//cierre switch
 
-        }
+        }//cierre while
 
-    }
+    }//cierre metodo main 
 
 }
