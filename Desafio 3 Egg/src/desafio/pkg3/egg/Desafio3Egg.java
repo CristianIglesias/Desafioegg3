@@ -1,36 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package desafio.pkg3.egg;
-
-import Entities.cliente;
+import Entities.Cliente;
 import Entities.Rutina;
 import Services.ClienteService;
-import Services.MenuServicio;
+import Services.MenuService;
 import Services.RutinaService;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-/**
- *
- * @author Cris
- */
 public class Desafio3Egg {
-
-    /**
-     * @param args the command line arguments
-     */
-    static ArrayList<cliente> listaCliente = new ArrayList<>();
+    static ArrayList<Cliente> listaCliente = new ArrayList<>();
     static ArrayList<Rutina> listaRutina = new ArrayList<>();
-
     public static void main(String[] args) {
 
         int opcion = -1;
+
         ClienteService clienteServ = new ClienteService();
         RutinaService rutinaServ = new RutinaService();
-        MenuServicio menuServ = new MenuServicio();
+        MenuService menuServ = new MenuService();
         Scanner leer = new Scanner(System.in);
 
         while (opcion != 0) {
@@ -98,13 +83,10 @@ public class Desafio3Egg {
                     return;
 
                 default:
-                    System.out.println("una opcion valida cammpeon");
+                    System.out.println("Una opción valida campeón.");
                     break;
 
             }//cierre switch
-
         }//cierre while
-
-    }//cierre metodo main 
-
+    }//cierre metodo main
 }

@@ -1,19 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Services;
-
-import Entities.cliente;
 import Entities.Rutina;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-/**
- *
- * @author Cris
- */
 public class RutinaService {
 
     private Rutina ruti = new Rutina();
@@ -21,23 +9,23 @@ public class RutinaService {
 
     public ArrayList<Rutina> CrearRutina(ArrayList<Rutina> rutinas) {
         Rutina rutiAux = new Rutina();
-        System.out.println("Ingrese el Nombre de la Rutina.");
+        rutiAux.setId(rutinas.size()+1); // acá estaba el error
+        System.out.println("Ingrese el nombre de la rutina: ");
         rutiAux.setNombre(leer.nextLine());
-        System.out.println("Ingrese la Duracion de la Rutinna (en minutos).");
+        System.out.println("Ingrese la duración de la rutina (en minutos): ");
         rutiAux.setDuracion(leer.nextDouble());
-        System.out.println("Ingrese el nivel de dificultad de la Rutina. (del 1 al 3)");
+        System.out.println("Ingrese el nivel de dificultad de la rutina (del 1 al 3): ");
         rutiAux.setDificultad(leer.nextInt());
         //Para que no nos coma una linea de mas.
         leer.nextLine();
 
-        System.out.println("Ingrese una breve descripcion de la Rutina.");
+        System.out.println("Ingrese una breve descripción de la rutina: ");
         rutiAux.setDescripcion(leer.nextLine());
 
-        leer.nextLine();
+        //leer.nextLine();
+        rutinas.add(rutiAux);
         return rutinas;
     }
-
-
 
     public void ListarRutinas(ArrayList<Rutina> rutinas) {
         for (int i = 0; i < rutinas.size(); i++) {
@@ -55,7 +43,7 @@ public class RutinaService {
         Rutina rutiAux = new Rutina();
 
         while(!bandera){
-            System.out.println("ingrese el ID del cliente a modificar");
+            System.out.println("Ingrese el ID del cliente a modificar: ");
 
             id = leer.nextInt();
             leer.nextLine();
@@ -71,10 +59,10 @@ public class RutinaService {
         System.out.println("Ingrese el nombre de la rutina: ");
         rutiAux.setNombre(leer.nextLine());
 
-        System.out.println("Ingrese la duracion: ");
+        System.out.println("Ingrese la duración de la rutina: ");
         rutiAux.setDuracion(leer.nextDouble());
 
-        System.out.println("Ingrese la dificultad: ");
+        System.out.println("Ingrese la dificultad de la rutina: ");
         rutiAux.setDificultad(leer.nextInt());
 
         System.out.println("Ingrese la descripción de la rutina: ");
@@ -98,7 +86,7 @@ public class RutinaService {
         Rutina rutiAux = new Rutina();
 
         while(!bandera){
-            System.out.println("ingrese el ID del cliente a modificar");
+            System.out.println("Ingrese el ID del cliente a eliminar: ");
 
 
             id = leer.nextInt();
@@ -115,6 +103,4 @@ public class RutinaService {
         }
         return rutinas;
     }
-
-
 }
