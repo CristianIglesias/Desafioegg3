@@ -37,6 +37,8 @@ public class RutinaService {
         return rutinas;
     }
 
+
+
     public void ListarRutinas(ArrayList<Rutina> rutinas) {
         for (int i = 0; i < rutinas.size(); i++) {
             System.out.println(rutinas.get(i).toString());

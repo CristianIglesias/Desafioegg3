@@ -21,11 +21,6 @@ public class Rutina {
         return id;
     }
 
-    @Override
-    public String toString() {
-        return "Rutina{" + "id=" + id + ", nombre=" + nombre + ", duracion=" + duracion + ", dificultad=" + dificultad + ", descripcion=" + descripcion + '}';
-    }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -74,8 +69,15 @@ public class Rutina {
         this.dificultad = dificultad;
         this.descripcion = descripcion;
     }
-    
-     
-    
-    
+
+    @Override
+    public String toString() {
+        return "Rutina{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", duracion=" + duracion +
+                ", dificultad=" + dificultad +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
+    }
 }
