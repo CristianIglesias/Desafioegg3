@@ -18,6 +18,7 @@ public class Desafio3Egg {
         MenuService menuServ = new MenuService();
         Scanner leer = new Scanner(System.in);
 
+        principalLoop:
         while (opcion != 0) {
 
             menuServ.MostrarMenuPrincipal();
@@ -75,6 +76,8 @@ public class Desafio3Egg {
                             case 4:
                                 listaRutina = rutinaServ.EliminarRutina(listaRutina);
                                 break;
+                            case 0:
+                                continue principalLoop; // vuelve al menú principal
                         }
                     }
 
